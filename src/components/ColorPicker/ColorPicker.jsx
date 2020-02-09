@@ -1,8 +1,10 @@
 import React from 'react';
 
-const ColorPicker = (props)=>(
-  <div className='component'>
-    ColorPicker
+const ColorPicker = ({ colors, selColorIdx, changeColor }) => (
+  <div>
+    {colors.map((color, idx) => (
+      <button key={color} value={idx} onClick={changeColor}>{color}</button>
+    ))}
   </div>
 );
 
